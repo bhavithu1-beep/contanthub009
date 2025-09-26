@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameSphere - Global Game Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1c1f26, #2a2e38);
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: #11141a;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    header img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 15px rgba(255,70,85,0.6);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #ff4655;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #1a1d24;
+      padding: 0.8rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0.5rem 1rem;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff4655;
+    }
+
+    /* Search Bar */
+    .search-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+
+    .search-container input {
+      width: 90%;
+      max-width: 500px;
+      padding: 0.7rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .games-section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h2 {
+      color: #ff4655;
+      border-bottom: 2px solid #444;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .game-card {
+      background: #2a2e38;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      background: #1c1f26;
+      padding: 10px;
+    }
+
+    .game-card h3 {
+      margin: 0.8rem;
+      font-size: 1.1rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .game-logo {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    .game-card a {
+      display: block;
+      margin: 0.8rem;
+      padding: 0.6rem;
+      text-align: center;
+      background: #ff4655;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .game-card a:hover {
+      background: #ff2b3f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      background: #11141a;
+      color: #bbb;
+      font-size: 1rem;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="GameSphere Logo">
+    <h1>GameSphere</h1>
+    <p>Search & Explore Games From Around The World</p>
+  </header>
+
+  <nav>
+    <a href="#action">Action</a>
+    <a href="#horror">Horror</a>
+    <a href="#story">Story</a>
+  </nav>
+
+  <!-- Search -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for a game...">
+  </div>
+
+  <!-- Action Games Section -->
+  <div class="games-section" id="action">
+    <h2>Action Games</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/6/65/Garena_Free_Fire_logo.png" alt="Free Fire">
+        <h3><img class="game-logo" src="https://seeklogo.com/images/F/free-fire-logo-0DC9F77B92-seeklogo.com.png" alt=""> Garena Free Fire</h3>
+        <a href="https://play.google.com/store/apps/details?id=com.dts.freefireth" target="_blank">Play Now</a>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/72/Battlegrounds_Mobile_India_logo.png" alt="BGMI">
+        <h3><img class="game-logo" src="https://seeklogo.com/images/B/bgmi-logo-1DC215BE6E-seeklogo.com.png" alt=""> Battlegrounds Mobile India</h3>
+        <a href="https://play.google.com/store/apps/details?id=com.pubg.imobile" target="_blank">Play Now</a>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Call_of_Duty_Mobile_icon.png" alt="COD Mobile">
+        <h3><img class="game-logo" src="https://seeklogo.com/images/C/call-of-duty-mobile-logo-83E0B6A7AD-seeklogo.com.png" alt=""> Call of Duty Mobile</h3>
+        <a href="https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter" target="_blank">Play Now</a>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Asphalt_9_icon.png" alt="Asphalt 9">
+        <h3><img class="game-logo" src="https://seeklogo.com/images/A/asphalt-9-legends-logo-DA62B88FEF-seeklogo.com.png" alt=""> Asphalt 9: Legends</h3>
+        <a href="https://play.google.com/store/apps/details?id=com.gameloft.android.ANMP.GloftA9HM" target="_blank">Play Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Horror Games -->
+  <div class="games-section" id="horror">
+    <h2>Horror Games</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/6/6d/Resident_Evil_2_cover.png" alt="Resident Evil 2">
+        <h3><img class="game-logo" src="https://seeklogo.com/images/R/resident-evil-2-logo-94E1B5C04A-seeklogo.com.png" alt=""> Resident Evil 2</h3>
+        <a href="https://store.steampowered.com/app/883710/Resident_Evil_2/" target="_blank">Play Now</a>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/26/Outlast_cover.jpg" alt="Outlast">
+        <h3><img class="game-logo" src="https://seeklogo.com/images/O/outlast-logo-86C3A1AE84-seeklogo.com.png" alt=""> Outlast</h3>
+        <a href="https://store.steampowered.com/app/238320/Outlast/" target="_blank">Play Now</a>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/6/61/Dead_by_Daylight_Cover_Art.jpg" alt="Dead by Daylight">
+        <h3><img class="game-logo" src="https://seeklogo.com/images/D/dead-by-daylight-logo-5D07F1C3E0-seeklogo.com.png" alt=""> Dead by Daylight</h3>
+        <a href="https://store.steampowered.com/app/381210/Dead_by_Daylight/" target="_blank">Play Now</a>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/3d/Silent_Hill_2.jpg" alt="Silent Hill 2">
+        <h3><img class="game-logo" src="https://seeklogo.com/images/S/silent-hill-logo-3ACB8D7E96-seeklogo.com.png" alt=""> Silent Hill 2</h3>
+        <a href="https://store.steampowered.com/app/2124490/SILENT_HILL_2/" target="_blank">Play Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story Games -->
+  <div class="games-section" id="story">
+    <h2>Story Games</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/2c/Life_is_Strange_cover_art.png" alt="Life is Strange">
+        <h3><img class="game-logo" src="https://seeklogo.com/images/L/life-is-strange-logo-F69B9C2877-seeklogo.com.png" alt=""> Life is Strange</h3>
+        <a href="https://store.steampowered.com/app/319630/Life_is_Strange__Episode_1/" target="_blank">Play Now</a>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Detroit_Become_Human_cover_art.jpg" alt="Detroit Become Human">
+        <h3><img class="game-logo" src="https://seeklogo.com/images/D/detroit-become-human-logo-1F4F54CC4B-seeklogo.com.png" alt=""> Detroit: Become Human</h3>
+        <a href="https://store.steampowered.com/app/1222140/Detroit_Become_Human/" target="_blank">Play Now</a>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/8e/The_Walking_Dead_game_cover.jpg" alt="Walking Dead">
+        <h3><img class="game-logo" src="https://seeklogo.com/images/T/the-walking-dead-logo-1F6B5D940C-seeklogo.com.png" alt=""> The Walking Dead</h3>
+        <a href="https://store.steampowered.com/app/207610/The_Walking_Dead/" target="_blank">Play Now</a>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/49/Red_Dead_Redemption_II.jpg" alt="Red Dead Redemption 2">
+        <h3><img class="game-logo" src="https://seeklogo.com/images/R/red-dead-redemption-2-logo-7E0E5E19B6-seeklogo.com.png" alt=""> Red Dead Redemption 2</h3>
+        <a href="https://store.steampowered.com/agecheck/app/1174180/" target="_blank">Play Now</a>
+      </div>
+      <!-- GTA 5 Added -->
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/77/Grand_Theft_Auto_V.png" alt="GTA 5">
+        <h3><img class="game-logo" src="https://seeklogo.com/images/G/grand-theft-auto-v-logo-6ED79D4076-seeklogo.com.png" alt=""> Grand Theft Auto V</h3>
+        <a href="https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/" target="_blank">Play Now</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>We are developing this game centre. Stay tuned. Thank you for visiting!</p>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("keyup", function () {
+      const filter = searchInput.value.toLowerCase();
+      const cards = document.querySelectorAll(".game-card");
+      cards.forEach(card => {
+        const title = card.querySelector("h3").textContent.toLowerCase();
+        card.style.display = title.includes(filter) ? "" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
